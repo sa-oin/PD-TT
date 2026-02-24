@@ -1,8 +1,184 @@
-body{font-family:Inter;margin:0}
-header{padding:20px;background:#fff}
-.hero{height:70vh;background:#1E88E5;color:#fff;display:flex;align-items:center;padding:40px}
-.btn{padding:12px 20px;border-radius:20px}
-.btn-primary{background:#FF9800;color:#fff}
-.enquiry-bar{padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-footer{text-align:center;padding:20px;background:#111;color:#fff}
-.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50px}
+/* === BASE MOBILE FIRST === */
+body {
+  font-family: 'Inter', sans-serif;
+  margin: 0;
+  color: #1A1A1A;
+  line-height: 1.6;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: #fff;
+}
+
+header h2 {
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 12px;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+nav a {
+  color: #1A1A1A;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+/* HERO */
+.hero {
+  height: auto;
+  min-height: 60vh;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url("../images/hero.jpg") center/cover no-repeat;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  margin: 6px 0;
+}
+
+.btn-primary {
+  background: #FF9800;
+  color: #fff;
+  width: 100%;
+}
+
+.btn-outline {
+  border: 2px solid #fff;
+  color: #fff;
+  width: 100%;
+}
+
+/* ENQUIRY BAR */
+.enquiry-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: #fff;
+  margin: -40px 16px 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.enquiry-bar input,
+.enquiry-bar button {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.enquiry-bar button {
+  background: #FF9800;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* TOURS */
+.tours {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 16px;
+}
+
+.tour-card {
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.tour-card img {
+  width: 100%;
+  height: auto;
+}
+
+.tour-card .content {
+  padding: 16px;
+}
+
+/* WHY US */
+.why {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px 16px;
+  text-align: center;
+}
+
+.why div {
+  padding: 20px;
+  background: #F5F9FF;
+  border-radius: 16px;
+}
+
+/* FOOTER */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 40px 16px;
+  text-align: center;
+}
+
+/* FLOATING WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 16px 24px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  z-index: 100;
+}
+
+/* === TABLET AND DESKTOP MEDIA QUERIES === */
+@media(min-width: 768px) {
+  header { flex-direction: row; justify-content: space-between; }
+  nav { flex-direction: row; gap: 20px; width: auto; }
+  .hero h1 { font-size: 40px; }
+  .hero p { font-size: 18px; }
+  .btn-primary, .btn-outline { width: auto; }
+  .tours { flex-direction: row; flex-wrap: wrap; gap: 24px; }
+  .tour-card { flex: 1 1 calc(50% - 24px); }
+  .why { flex-direction: row; }
+}
+@media(min-width: 1024px) {
+  .tour-card { flex: 1 1 calc(33% - 24px); }
+  .hero h1 { font-size: 52px; }
+  .hero p { font-size: 20px; }
+}
