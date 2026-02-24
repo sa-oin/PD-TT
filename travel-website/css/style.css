@@ -1,0 +1,8 @@
+body{font-family:Inter;margin:0}
+header{padding:20px;background:#fff}
+.hero{height:70vh;background:#1E88E5;color:#fff;display:flex;align-items:center;padding:40px}
+.btn{padding:12px 20px;border-radius:20px}
+.btn-primary{background:#FF9800;color:#fff}
+.enquiry-bar{padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+footer{text-align:center;padding:20px;background:#111;color:#fff}
+.whatsapp-float{position:fixed;bottom:20px;right:20px;background:#25D366;color:#fff;padding:15px;border-radius:50px}
